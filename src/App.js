@@ -14,8 +14,9 @@ function App() {
   const [sort, setSort] = useState("");
 
   useEffect(() => {
-    fetchMovies();
-  }, [currentPage, query, sort]);
+  fetchMovies();
+  // eslint-disable-next-line
+}, [currentPage, query, sort]);
 
   const fetchMovies = async () => {
     let url;
